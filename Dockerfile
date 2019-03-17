@@ -1,9 +1,9 @@
 FROM php:fpm-alpine
 RUN docker-php-ext-install mysqli
-RUN apt-get update -y && apt-get install -y sendmail libpng-dev
+RUN apk update and apk add -y sendmail libpng-dev
 
-RUN apt-get update && \
-    apt-get install -y \
+RUN apk update && \
+    apk add -y \
         zlib1g-dev 
 
 RUN docker-php-ext-install mbstring
